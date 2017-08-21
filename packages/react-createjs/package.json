@@ -1,11 +1,14 @@
 {
-  "name": "@pk4media/react-dom",
+  "name": "@pk4media/react-createjs",
   "version": "16.0.0-beta.5",
-  "description": "React package for working with the DOM.",
+  "description": "React ART is a JavaScript library for drawing vector graphics using React. It provides declarative and reactive bindings to the ART library. Using the same declarative API you can render the output to either Canvas, SVG or VML (IE8).",
   "main": "index.js",
   "repository": "pk4media/react",
   "keywords": [
-    "react"
+    "react",
+    "createjs",
+    "canvas",
+    "jsx"
   ],
   "license": "BSD-3-Clause",
   "bugs": {
@@ -15,8 +18,7 @@
   "dependencies": {
     "fbjs": "^0.8.9",
     "loose-envify": "^1.1.0",
-    "object-assign": "^4.1.0",
-    "prop-types": "^15.5.6"
+    "object-assign": "^4.1.0"
   },
   "peerDependencies": {
     "react": "^16.0.0-beta.5"
@@ -26,16 +28,9 @@
     "PATENTS",
     "README.md",
     "index.js",
-    "server.js",
-    "server.browser.js",
-    "test-utils.js",
-    "unstable-native-dependencies.js",
     "cjs/",
     "umd/"
   ],
-  "browser": {
-    "./server.js": "./server.browser.js"
-  },
   "browserify": {
     "transform": [
       "loose-envify"

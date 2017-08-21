@@ -44,6 +44,7 @@
     "core-js": "^2.2.1",
     "coveralls": "^2.11.6",
     "create-react-class": "^15.6.0",
+    "createjs-cmd": "^0.1.0",
     "del": "^2.0.2",
     "derequire": "^2.0.3",
     "escape-string-regexp": "^1.0.5",
@@ -75,6 +76,7 @@
     "minimist": "^1.2.0",
     "ncp": "^2.0.0",
     "object-assign": "^4.1.1",
+    "pixi.js": "^4.5.4",
     "platform": "^1.1.0",
     "prettier": "1.2.2",
     "prop-types": "^15.5.8",
@@ -124,5 +126,6 @@
       "<rootDir>/scripts/jest/stack.config.json",
       "<rootDir>/scripts/jest/fiber.config.json"
     ]
-  }
+  },
+  "dependencies": {}
 }

@@ -33,6 +33,13 @@ const babelOptsReactART = Object.assign({}, babelOptsReact, {
   ]),
 });
 
+const babelOptsReactCreateJS = Object.assign({}, babelOptsReact, {
+  // Include JSX
+  presets: babelOptsReact.presets.concat([
+    require.resolve('babel-preset-react'),
+  ]),
+});
+
 const bundles = [
   /******* Isomorphic *******/
   {
@@ -243,6 +250,39 @@ const bundles = [
     name: 'react-art',
     paths: [
       'src/renderers/art/**/*.js',
+      'src/renderers/shared/**/*.js',
+
+      'src/ReactVersion.js',
+      'src/shared/**/*.js',
+    ],
+  },
+
+  /******* React CreateJS *******/
+  {
+    babelOpts: babelOptsReactCreateJS,
+    bundleTypes: [UMD_DEV, UMD_PROD, NODE_DEV, NODE_PROD, FB_DEV, FB_PROD],
+    config: {
+      destDir: 'build/',
+      globals: {
+        react: 'React',
+      },
+      moduleName: 'ReactCreateJS',
+      sourceMap: false,
+    },
+    entry: 'src/renderers/createjs/ReactCreateJSFiberEntry',
+    externals: [
+      'createjs-cmd',
+      'prop-types/checkPropTypes',
+      'react-dom',
+    ],
+    fbEntry: 'src/renderers/createjs/ReactCreateJSFiberEntry',
+    hasteName: 'ReactCreateJSFiber',
+    isRenderer: true,
+    label: 'createjs-fiber',
+    manglePropertiesOnProd: false,
+    name: 'react-createjs',
+    paths: [
+      'src/renderers/createjs/**/*.js',
       'src/renderers/shared/**/*.js',
 
       'src/ReactVersion.js',
